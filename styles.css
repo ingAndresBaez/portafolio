@@ -1,127 +1,199 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+    color: #333;
+    background-color: #f7f7f7;
 }
 
+/* Contenedor general */
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
     max-width: 1200px;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: #77a6f7 3px solid;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-nav a {
-    color: #333;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background: #77a6f7;
-    color: #fff;
-}
-
-section {
+    margin: 0 auto;
     padding: 20px;
-    margin: 20px 0;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+/* Encabezado */
+header {
+    background-color: #5A9E6F;
+    color: #fff;
+    padding: 40px 0;
     text-align: center;
-    color: #333;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navegación */
+nav {
+    background-color: #4F8776;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3b6e5b;
+}
+
+/* Secciones */
+section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #5A9E6F;
+}
+
+/* Acerca de mí */
 .profile {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .profile img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-right: 20px;
     object-fit: cover;
 }
 
 .profile-text {
-    flex: 1;
-    min-width: 250px;
+    max-width: 75%;
+    padding-left: 20px;
 }
 
+/* Botones */
+.btn {
+    background-color: #5A9E6F;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #497f5e;
+}
+
+/* Habilidades */
 .skills-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
     text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
 }
 
 .skill img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
     border-radius: 10px;
-    background: #f1f1f1;
-    padding: 10px;
 }
 
 .skill p {
-    margin-top: 10px;
-    font-size: 1.1em;
+    font-size: 1rem;
     font-weight: bold;
 }
 
+/* Lista de habilidades aprendidas */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #E9F5EC;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Experiencia */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience {
+    background-color: #EAF7F1;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #d4e6dd;
+}
+
+.experience h3 {
+    margin-bottom: 10px;
+    color: #497f5e;
+}
+
+.experience p {
+    margin-bottom: 10px;
+}
+
+/* Proyectos */
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .project {
-    background: #fff;
-    border-radius: 10px;
+    background-color: #ffffff;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #77a6f7;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 48%;
     transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
 }
 
 .project img {
@@ -130,84 +202,55 @@ section h2 {
     margin-top: 10px;
 }
 
-.project h3 {
-    margin-top: 0;
+/* Contacto */
+#contact ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.buttons {
-    margin: 10px 0;
+#contact ul li {
+    background-color: #E9F5EC;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.btn {
-    background: #77a6f7;
-    color: #fff;
-    padding: 10px 20px;
+#contact ul li a {
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-    text-align: center;
-    flex: 1;
-    margin: 5px;
+    color: #5A9E6F;
+    font-weight: bold;
 }
 
-.btn:hover {
-    background: #0056b3;
-}
-
+/* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #4F8776;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
-ul li a {
-    color: #77a6f7;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
+/* Estilos responsivos */
 @media (max-width: 768px) {
     .profile {
         flex-direction: column;
         text-align: center;
     }
 
-    .profile img {
-        margin: 0 auto 20px;
+    .profile-text {
+        max-width: 100%;
+        padding-left: 0;
     }
 
-    .projects-container {
-        grid-template-columns: 1fr;
+    .skills-container .skill {
+        width: 45%;
     }
 
-    .buttons {
-        flex-direction: column;
-    }
-
-    .btn {
+    .projects-container .project {
         width: 100%;
-        margin-bottom: 10px;
     }
 }
